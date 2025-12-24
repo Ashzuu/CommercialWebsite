@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+}
+
+#header-logo-container {
+  width: 30%;
+}
+
+#header-menu-container {
+  width: fit-content;
+}
