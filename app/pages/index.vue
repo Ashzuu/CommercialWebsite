@@ -2,7 +2,10 @@
   import Header from '~/components/Header.vue';
   import HomePageProps from "~/models/pages/HomePageProps";
 
-  const home:HomePageProps = new HomePageProps();
+  const manager:HomePageProps = new HomePageProps();
+  provide('homePageManager', manager);
+
+
 </script>
 
 <template>
@@ -12,10 +15,10 @@
       <div class="overlay-obscured"/>
       <div class="content-container">
         <section class="caroussel-home-section">
-          <!-- Mettre ici le carroussel pour faire défiler les images -->
+          <CircularMenu/>
         </section>
         <div class="content-home-container">
-          <h1>{{ home.Title }}</h1>
+          <h1>{{ manager.Title }}</h1>
           <div class="buttons-container">
             <!-- Faire les boutons pour le "call-to-action" -->
           </div>

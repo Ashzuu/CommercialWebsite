@@ -45,6 +45,10 @@ export default class HomePageProps {
     ];
   }
 
+  get Id(): number {
+    return this.currentSelectionIndex;
+  }
+
   /**
    * Get the image URL of the current selection.
    * @return {string} The image URL.
@@ -70,10 +74,35 @@ export default class HomePageProps {
   }
 
   /**
+   * Get the label of the current selection.
+   * @return {string} The label.
+   */
+  get Label(): string {
+    return this.elements[this.currentSelectionIndex]!.Label;
+  }
+
+  /**
+   * Get the label of the previous selection.
+   * @return {string} The label.
+   */
+  get PreviousLabel(): string | null {
+    return  this.currentSelectionIndex > 0 ? this.elements[this.Id-1]!.Label : null;
+  }
+
+  /**
+   * Get the label of the next selection.
+   * @return {string} The label.
+   */
+  get NextLabel(): string | null {
+    return this.elements.length > this.currentSelectionIndex ? this.elements[this.Id+1]!.Label : null;
+  }
+
+  /**
    * Method to switch the current selection.
    * @param {id} The id to change the current selection to.
    */
   public ChangeCurrentSelection(id: number) {
+    console.log(id);
     this.currentSelectionIndex = id;
   }
 
