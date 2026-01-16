@@ -24,7 +24,7 @@
 
 <template>
   <RouterLink class="btn" :class="buttonType" :to=nameRoute>
-    <a>{{label}}</a><Icon :name="icon"/>
+    <span>{{label}}</span><Icon v-if="icon" :name="icon"/>
   </RouterLink>
 </template>
 
