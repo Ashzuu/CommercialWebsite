@@ -24,7 +24,7 @@
           <p class="content-home-description">{{manager.Description}}</p>
           <div class="buttons-container">
             <Button label="Découvrir" name-route="/processus" icon="ei:arrow-right" :button-type="ButtonType.PRIMARY"/>
-            <Button label="Me contacter" name-route="/contact" icon="solar:phone-linear" :button-type=ButtonType.OUTLINED />
+            <Button label="Me contacter" name-route="/contact" icon="solar:phone-linear" :button-type="ButtonType.OUTLINED" />
           </div>
         </div>
       </div>
