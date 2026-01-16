@@ -5,12 +5,12 @@ export default class HomePageProps {
   private currentSelectionIndex:number;
 
   constructor() {
-    this.currentSelectionIndex = 1;
+    this.currentSelectionIndex = 0;
     this.elements = [
       new HomePageElement(
         1,
         "A l'écoute de vos envies",
-        "Des sites internet sur-mesure, adaptés à vos besoins !",
+        "Des sites internet sur-mesure, adaptés à vos besoins.",
         "Nous vous proposons une large gamme de services adaptés à vos besoins et à vos envies. " +
         "Que vous cherchiez un site internet pour votre entreprise, ou un site de gestion,  " +
         "toutes les idées sont possibles.",
@@ -19,7 +19,7 @@ export default class HomePageProps {
       new HomePageElement(
         2,
         "A moindre coût",
-        "Des sites internet à bas coût, sans néglier la qualité !",
+        "Des sites internet à bas coût, sans néglier la qualité.",
         "Nous mettons un point d'honneur à vous proposer des services de qualité à des prix compétitifs. " +
         "Nous croyons que tout le monde devrait avoir accès à des solutions web performantes, " +
         "sans se ruiner.",
@@ -28,7 +28,7 @@ export default class HomePageProps {
       new HomePageElement(
         3,
         "Accompagnement personnalisé",
-        "Un accompagnement personnalisé à chaque étape de votre projet !",
+        "Un accompagnement personnalisé à chaque étape de votre projet.",
         "Nous prenons le temps de comprendre vos besoins spécifiques afin de vous offrir un accompagnement sur mesure. " +
         " Que vous soyez novice ou expérimenté, nous sommes là pour vous guider à chaque étape de votre projet.",
         "/img/background/homepage3.png"
@@ -36,7 +36,7 @@ export default class HomePageProps {
       new HomePageElement(
         4,
         "Conseil",
-        "Des conseils d'experts pour maximiser l'impact de votre présence en ligne !",
+        "Des conseils d'experts pour maximiser l'impact de votre présence en ligne.",
         "A votre disposition pour vous fournir des conseils avisés " +
         "et des stratégies efficaces afin de maximiser l'impact de votre présence en ligne. " +
         "Nous vous aidons à atteindre vos objectifs commerciaux grâce à des solutions web innovantes.",
@@ -45,6 +45,10 @@ export default class HomePageProps {
     ];
   }
 
+  /**
+   * Get the identifier of the current selection.
+   * @return {number} The identifier.
+   */
   get Id(): number {
     return this.currentSelectionIndex;
   }
@@ -94,7 +98,7 @@ export default class HomePageProps {
    * @return {string} The label.
    */
   get NextLabel(): string | null {
-    return this.elements.length > this.currentSelectionIndex ? this.elements[this.Id+1]!.Label : null;
+    return this.elements.length-1 > this.currentSelectionIndex ? this.elements[this.Id+1]!.Label : null;
   }
 
   /**
