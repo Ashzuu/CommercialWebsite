@@ -1,0 +1,15 @@
+main {
+  position: relative;
+  width: 100dvw;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#process-page-container {
+  background: var(--primary-color);
+}
