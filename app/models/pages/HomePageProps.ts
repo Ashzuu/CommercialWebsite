@@ -14,7 +14,7 @@ export default class HomePageProps {
         "Nous vous proposons une large gamme de services adaptés à vos besoins et à vos envies. " +
         "Que vous cherchiez un site internet pour votre entreprise, ou un site de gestion,  " +
         "toutes les idées sont possibles.",
-        "/img/background/homepage1.png"
+        "/img/background/homepage1.webp"
         ),
       new HomePageElement(
         2,
@@ -23,7 +23,7 @@ export default class HomePageProps {
         "Nous mettons un point d'honneur à vous proposer des services de qualité à des prix compétitifs. " +
         "Nous croyons que tout le monde devrait avoir accès à des solutions web performantes, " +
         "sans se ruiner.",
-        "/img/background/homepage2.png"
+        "/img/background/homepage2.webp"
       ),
       new HomePageElement(
         3,
@@ -31,7 +31,7 @@ export default class HomePageProps {
         "Un accompagnement personnalisé à chaque étape de votre projet.",
         "Nous prenons le temps de comprendre vos besoins spécifiques afin de vous offrir un accompagnement sur mesure. " +
         " Que vous soyez novice ou expérimenté, nous sommes là pour vous guider à chaque étape de votre projet.",
-        "/img/background/homepage3.png"
+        "/img/background/homepage3.webp"
       ),
       new HomePageElement(
         4,
@@ -40,7 +40,7 @@ export default class HomePageProps {
         "A votre disposition pour vous fournir des conseils avisés " +
         "et des stratégies efficaces afin de maximiser l'impact de votre présence en ligne. " +
         "Nous vous aidons à atteindre vos objectifs commerciaux grâce à des solutions web innovantes.",
-        "/img/background/homepage4.png"
+        "/img/background/homepage4.webp"
       ),
     ];
   }
