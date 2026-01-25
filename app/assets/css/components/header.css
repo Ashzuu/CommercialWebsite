@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  height: 10%;
+  height: 10dvh;
 }
 
 #header-logo-container {
@@ -36,4 +36,19 @@ header {
   color: black;
   text-decoration: none;
   font-size: 1.5em;
+}
+
+.active {
+  background: #D9D9D9;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Variant */
+.dark li a {
+  color: white !important;
+}
+
+.dark .active {
+  background: #505050;
 }

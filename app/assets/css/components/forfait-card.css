@@ -1,0 +1,40 @@
+.card-tarification {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-tarification h3 {
+  margin: 0;
+  font-size: 42px;
+}
+
+.card-tarification p {
+  margin: 0;
+}
+
+.little-indication-price {
+  color: var(--contrast-color);
+}
+
+.little-indication-price-container {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+
+.little-indication-price-container .indication-price {
+  font-size: 32px;
+}
+
+.forfait-indicator-subtitle {
+  color: var(--contrast-color);
+}
+
+.forfait-advantages-list {
+  color: var(--contrast-color);
+  list-style-type: circle;
+  font-size: 26px;
+  padding-left: 20px;
+}

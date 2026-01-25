@@ -1,0 +1,176 @@
+main {
+  position: relative;
+  width: 100dvw;
+}
+
+h1, h2, h3 {
+  font-family: Joan, "Inter Semi Bold", -apple-system, sans-serif;
+  font-weight: 100;
+}
+
+.sections-common {
+  width: 80dvw;
+  height: 100dvh;
+}
+
+.content-container {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.title-section-container {
+  display: flex;
+  align-items: center;
+  height: 90dvh;
+  position: relative;
+}
+
+.title-section-container .title-section {
+  color: white;
+  width: 60%;
+}
+
+.title-section-container .title-section h1 {
+  margin: 0;
+  font-size: 88px;
+}
+
+.title-section-subtitle {
+  font-size: 32px;
+}
+
+.title-section-icon {
+  font-size: 76px;
+}
+
+.icon-title-section {
+  position: absolute;
+  left: calc(50% - 30px);
+  font-size: 60px;
+  bottom: 10%;
+  animation: 2s arrowAnimation infinite;
+}
+
+.image-presentation-section {
+  display: flex;
+  width: 100%;
+}
+
+.img-section {
+  position: relative;
+  flex: 1;
+  transition: flex 0.6s;
+}
+
+.img-section:hover {
+  flex: 2;
+}
+
+.img-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.6s;
+}
+
+.img-section:hover img {
+  filter: brightness(25%);
+}
+
+.img-section-content {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  left: 5%;
+  gap: 10%;
+  transition: opacity 0.4s 0.2s;
+}
+
+.img-section-content h2 {
+  font-size: 76px;
+}
+
+.img-section-content p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.img-section:hover .img-section-content {
+  opacity: 1;
+}
+
+.title-section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-section-title h2 {
+  margin: 0;
+}
+
+.tarification-section-container {
+  height: 75dvh;
+}
+
+.tarification-section-header {
+  height: 30%;
+}
+
+.tarification-section-header h2 {
+  font-size: 58px;
+}
+
+.tarification-section-header hr {
+  margin-bottom: 20px;
+}
+
+.tarification-section-header p {
+  margin: 0;
+}
+
+.tarification-price-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 50%;
+}
+
+.tarification-price-container hr {
+  height: 80%;
+}
+
+.tarification-price-container .card-tarification {
+  width: 100%;
+}
+
+#process-page-container {
+  background: var(--primary-color);
+}
+
+@keyframes arrowAnimation {
+  0% {
+    bottom: 10%;
+  }
+
+  10% {
+    bottom: 10%;
+  }
+
+  100% {
+    opacity: 0;
+    bottom: 0;
+    transform: scale(0.8, 1);
+  }
+}

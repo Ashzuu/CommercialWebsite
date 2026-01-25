@@ -28,7 +28,7 @@ main {
 }
 
 .content-home-container {
-  width: 60%;
+  width: 50%;
   height: 70%;
   padding: 0 5%;
   position: relative;
@@ -44,7 +44,8 @@ main {
   display: flex;
   gap: 20px;
   position: absolute;
-  bottom: 0
+  bottom: 0;
+  right: 5%;
 }
 
 .content-home-container h1 {
