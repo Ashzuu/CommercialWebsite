@@ -13,7 +13,7 @@
 <template>
   <div id="home-page-container" class="simple-container">
     <Header/>
-    <main :style="{ backgroundImage: `url(${manager.ImageUrl})` }">
+    <main :style="{ backgroundImage: `url(${manager.ImageUrl})` }" loading="lazy">
       <div class="overlay-obscured"/>
       <div class="content-container">
         <section class="caroussel-home-section">
