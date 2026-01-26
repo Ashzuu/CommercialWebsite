@@ -66,7 +66,7 @@ const onClickButtonClose = () => {
     <Header variant="dark"/>
     <div v-if="show" class="container-message-temoin" :class="success ? 'success-message' : 'failed-message'">
       <div class="content-message-temoin">
-        <Icon name="pajamas:close-xs" class="close" :onclick="onClickButtonClose"></Icon>
+        <LazyIcon name="pajamas:close-xs" class="close" :onclick="onClickButtonClose"/>
         <h3 v-if="success" >Votre message a bien été envoyé !</h3>
         <h3 v-else>Une erreur est survenue lors de l'envoi du message.</h3>
 
@@ -133,7 +133,7 @@ const onClickButtonClose = () => {
             <div class="form-actions">
               <button type="submit" class="btn-submit">
                 Envoyer
-                <Icon name="iconamoon:arrow-right-2-bold"></Icon>
+                <LazyIcon name="iconamoon:arrow-right-2-bold"/>
               </button>
             </div>
           </form>
