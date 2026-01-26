@@ -1,4 +1,4 @@
-# Site Personnel - Evan Dynak
+# Site Personnel
 
 Ce dépôt contient le code source de mon site personnel et professionnel. Il a pour vocation principale de présenter mes services, mon processus de travail et de servir de **vitrine technique** démontrant mes compétences en développement web moderne.
 
@@ -8,7 +8,7 @@ Ce dépôt contient le code source de mon site personnel et professionnel. Il a 
 
 Ce projet est conçu avec une approche moderne axée sur la performance et la maintenabilité.
 
-* **Framework :** [Nuxt 3](https://nuxt.com/) (Vue.js 3)
+* **Framework :** [Nuxt 4](https://nuxt.com/) (Vue.js 3)
 * **Langage :** TypeScript (Typage fort des props et des modèles)
 * **Styling :** CSS natif (Variables CSS `:root`, Scoped CSS)
 * **Emailing :** [EmailJS](https://www.emailjs.com/) (Gestion du formulaire de contact)
@@ -23,7 +23,9 @@ Le projet suit une structure claire visant à séparer la logique métier de la 
 * **`app/components/`** : Composants Vue réutilisables (Header, Boutons, Cartes de tarification).
 * **`app/pages/`** : Pages principales (Accueil, Processus, Contact).
 
-## 🚀 Fonctionnalités Clés
+> ⚠️ Si vous voyez d'énormes manquements dans l'architecture sur les principes SOLID notamment, n'hésitez pas à me le signaler  via une issue !
+
+## 🔧 Fonctionnalités Clés
 
 * **Page d'accueil dynamique :** Système de carrousel géré par un modèle de données (`HomePageProps`) avec un menu circulaire interactif.
 * **Processus & Tarification :** Présentation des offres via des composants dédiés (`ForfaitCard`) et explication des étapes de développement.
@@ -39,8 +41,8 @@ Si vous souhaitez lancer le projet localement pour analyser le code :
 
 1.  **Cloner le dépôt :**
     ```bash
-    git clone [https://github.com/votre-username/votre-repo.git](https://github.com/votre-username/votre-repo.git)
-    cd votre-repo
+    git clone https://github.com/ashzuu/commercialwebsite.git
+    cd CommercialWebsite
     ```
 
 2.  **Installer les dépendances :**
@@ -53,6 +55,8 @@ Si vous souhaitez lancer le projet localement pour analyser le code :
 3.  **Lancer le serveur de développement :**
     ```bash
     npm run dev
+    # ou
+    nuxt dev
     ```
     L'application sera accessible sur `http://localhost:3000`.
 
@@ -63,11 +67,26 @@ Pour que le formulaire de contact fonctionne dans un environnement cloné, vous 
 
 Le fichier `app/assets/ts/ManageEmail.ts` attend une configuration. Il est recommandé d'utiliser des variables d'environnement (`.env`) pour la production plutôt que de laisser les clés en dur.
 
+Appuyez-vous sur le fichier `.env.example` pour créer votre propre fichier `.env` avec les valeurs appropriées.  
+Vous devez créé un compte EmailJS afin d'obtenir une clé publique, configurer un service email et un template afin que le service fonctionne.
+
+## 👀 Choix de ne pas utiliser d'outils supplémentaires de "gain de temps"
+
+J'ai fait le choix de ne pas utiliser de bibliothèques ou frameworks CSS (comme TailwindCSS, Bootstrap, etc.) ni de générateurs de formulaires (comme VeeValidate, FormKit, etc.) afin de démontrer ma capacité à construire des interfaces et des fonctionnalités à partir de zéro.
+
+L'objectif est de mettre en avant mes compétences en développement web pur, en utilisant uniquement les technologies de base (HTML, CSS, JavaScript/TypeScript) et le framework Nuxt.js. 
+Cela permet de mieux contrôler le design, la performance et la maintenabilité du code, tout en montrant ma maîtrise des concepts fondamentaux du développement web.
+
+Dans le cas d'un projet réel, pour gagner du temps et bénéficier de fonctionnalités avancées, j'évaluerais l'utilisation de telles bibliothèques en fonction des besoins spécifiques du projet.
+Cela permet notamment de réduire le temps de développement et d'assurer une meilleure cohérence dans le design et les interactions utilisateur.
+
 ## 👤 Auteur
 
-**Evan Dynak**
+**Evan DYNAK**
+* **GitHub :** [Ashzuu](https://github.com/ashzuu)
+* **Portfolio :** [evandynak.me](https://website.evandynak.me/)
 * **Email :** evan.dynak@bbox.fr
-* **Site Web :** [Cliquez ici](https://website.evandynak.me/)
+* **Site Web :** [website.evandynak.me](https://website.evandynak.me/)
 
 ---
 *Fait avec ❤️ et TypeScript.*
