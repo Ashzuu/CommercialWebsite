@@ -3,5 +3,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/eslint', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image'],
-  css: ['~/assets/css/style.css']
+  css: ['~/assets/css/style.css'],
+  runtimeConfig: {
+    public: {
+      emailjsServiceId: '',
+      emailjsTemplateId: '',
+      emailjsPublicKey: ''
+    }
+  }
 })
