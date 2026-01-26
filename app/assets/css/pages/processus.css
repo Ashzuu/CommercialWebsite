@@ -18,8 +18,7 @@ h1, h2, h3 {
   color: white;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  height: fit-content;
 }
 
 .title-section-container {
@@ -97,7 +96,7 @@ h1, h2, h3 {
 }
 
 .img-section-content h2 {
-  font-size: 76px;
+  font-size: 3rem;
 }
 
 .img-section-content p {
@@ -121,7 +120,7 @@ h1, h2, h3 {
 }
 
 .tarification-section-container {
-  height: 75dvh;
+  height: fit-content;
 }
 
 .tarification-section-header {
@@ -145,6 +144,7 @@ h1, h2, h3 {
   align-items: center;
   gap: 40px;
   height: 50%;
+  padding: 5% 0;
 }
 
 .tarification-price-container hr {
