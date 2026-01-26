@@ -32,7 +32,7 @@
         </section>
         <main id="presentation-section" class="sections-common image-presentation-section">
           <div class="img-section first-img-section">
-            <NuxtImg src="/img/illustrations/illustration_1.webp"/>
+            <LazyNuxtImg src="/img/illustrations/illustration_1.webp"/>
             <div class="img-section-content first-section-content">
               <div class="title-section-title">
                 <Icon class="title-section-icon" name="mynaui:one-circle"/>
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="img-section second-img-section">
-            <NuxtImg src="/img/illustrations/illustration_2.webp"/>
+            <LazyNuxtImg src="/img/illustrations/illustration_2.webp"/>
             <div class="img-section-content second-section-content">
               <div class="title-section-title">
                 <Icon class="title-section-icon" name="mynaui:two-circle"/>
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="img-section third-img-section">
-            <NuxtImg src="/img/illustrations/illustration_3.webp"/>
+            <LazyNuxtImg src="/img/illustrations/illustration_3.webp"/>
             <div class="img-section-content third-section-content">
               <div class="title-section-title">
                 <Icon class="title-section-icon" name="mynaui:three-circle"/>
