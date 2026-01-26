@@ -20,8 +20,10 @@
           <CircularMenu/>
         </section>
         <div class="content-home-container">
+          <LazyIcon v-if="manager.PreviousLabel" @click="manager.ChangeCurrentSelection(manager.Id - 1)" class="arrow-left-icon" name="iconamoon:arrow-left-6-circle-light"/>
+          <LazyIcon v-if="manager.NextLabel" @click="manager.ChangeCurrentSelection(manager.Id + 1)" class="arrow-right-icon" name="iconamoon:arrow-right-6-circle-light"/>
           <h1>{{ manager.Title }}</h1>
-          <p class="content-home-description">{{manager.Description}}</p>
+          <p class="content-home-description">{{ manager.Description }}</p>
           <div class="buttons-container">
             <Button label="Découvrir" name-route="/processus" icon="ei:arrow-right" :button-type="ButtonType.PRIMARY"/>
             <Button label="Me contacter" name-route="/contact" icon="solar:phone-linear" :button-type="ButtonType.OUTLINED"/>

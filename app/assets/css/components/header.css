@@ -77,9 +77,8 @@ header {
   }
 
   .list-nav-bar {
-    opacity: 0;
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     align-items: center;
     top: calc(10dvh - 40px);

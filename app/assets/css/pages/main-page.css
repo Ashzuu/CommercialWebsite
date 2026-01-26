@@ -62,7 +62,86 @@ main {
   background: black;
 }
 
+.arrow-left-icon, .arrow-right-icon {
+  display: none;
+}
+
 #home-page-container {
   width: 100dvw;
   height: 100dvh;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .arrow-left-icon, .arrow-right-icon {
+    display: block;
+    position: absolute;
+    font-size: 3em;
+    top: 50%;
+  }
+
+  .arrow-left-icon {
+    left: 10px;
+  }
+
+  .arrow-right-icon {
+    right: 10px;
+  }
+
+  .caroussel-home-section {
+    display: none;
+  }
+
+  .content-home-container {
+    width: 80%;
+    padding: 0 10%;
+    text-align: center;
+  }
+
+  .content-home-container h1 {
+    font-size: 2.4em;
+  }
+
+  .content-home-description {
+    font-size: 1.3em;
+    margin: 15px 0;
+  }
+
+  .buttons-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    width: 100%;
+  }
+
+  .buttons-container a {
+    width: fit-content;
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 420px) {
+  .arrow-left-icon, .arrow-right-icon {
+    font-size: 2.5em;
+  }
+  .content-home-container {
+    width: 70%;
+    padding: 0 15%;
+  }
+
+  .content-home-container h1 {
+    font-size: 1.8em;
+  }
+
+  .content-home-description {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+
+  .buttons-container a {
+    font-size: 1.1em;
+  }
 }
