@@ -78,7 +78,7 @@ const onClickButtonClose = () => {
     <main>
       <div class="contact-container">
         <div class="contact-info-container">
-          <h1 class="main-title">Parlons de<br>votre projet</h1>
+          <h1 class="main-title">Parlons de<br> votre projet</h1>
           <p class="subtitle">
             Vous avez une idée en tête ? Je suis là pour vous accompagner dans la création de votre site web, étape par étape.
           </p>

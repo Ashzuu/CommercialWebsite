@@ -106,7 +106,6 @@ export default class HomePageProps {
    * @param {id} The id to change the current selection to.
    */
   public ChangeCurrentSelection(id: number) {
-    console.log(id);
     this.currentSelectionIndex = id;
   }
 

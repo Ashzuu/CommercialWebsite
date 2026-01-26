@@ -28,14 +28,15 @@
             <h1>Processus de création d'un site web</h1>
             <p class="title-section-subtitle">Découvrez mes processus de création des site Internet, étape par étape.</p>
           </div>
-          <Icon class="icon-title-section" name="iconamoon:arrow-down-2-bold"/>
+          <LazyIcon class="icon-title-section" name="iconamoon:arrow-down-2-bold"/>
         </section>
         <main id="presentation-section" class="sections-common image-presentation-section">
           <div class="img-section first-img-section">
             <LazyNuxtImg src="/img/illustrations/illustration_1.webp"/>
+            <LazyIcon name="clarity:cursor-hand-click-line" class="icon-click-mobile"/>
             <div class="img-section-content first-section-content">
               <div class="title-section-title">
-                <Icon class="title-section-icon" name="mynaui:one-circle"/>
+                <LazyIcon class="title-section-icon" name="mynaui:one-circle"/>
                 <h2>Préparation</h2>
               </div>
               <p>Analyse des besoins, définition des objectifs, choix des technologies et planification du projet.</p>
@@ -43,6 +44,7 @@
           </div>
           <div class="img-section second-img-section">
             <LazyNuxtImg src="/img/illustrations/illustration_2.webp"/>
+            <LazyIcon name="clarity:cursor-hand-click-line" class="icon-click-mobile"/>
             <div class="img-section-content second-section-content">
               <div class="title-section-title">
                 <Icon class="title-section-icon" name="mynaui:two-circle"/>
@@ -53,9 +55,10 @@
           </div>
           <div class="img-section third-img-section">
             <LazyNuxtImg src="/img/illustrations/illustration_3.webp"/>
+            <LazyIcon name="clarity:cursor-hand-click-line" class="icon-click-mobile"/>
             <div class="img-section-content third-section-content">
               <div class="title-section-title">
-                <Icon class="title-section-icon" name="mynaui:three-circle"/>
+                <LazyIcon class="title-section-icon" name="mynaui:three-circle"/>
                 <h2>Retours & Retouches</h2>
               </div>
               <p>Recueil des retours et retouches : priorisation des ajustements fonctionnels et graphiques, correction des bugs, optimisation des performances et accessibilité. Validation finale via une recette, préparation du déploiement et accompagnement pour la mise en production.</p>

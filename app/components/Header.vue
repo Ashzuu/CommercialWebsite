@@ -22,9 +22,9 @@
         </ul>
       </nav>
     </div>
-    <div id="header-menu-container-mobile">
+    <div id="header-menu-container-mobile" :class="variant ? variant : ''">
       <LazyIcon name="iconamoon:apps-bold" class="icon-menu-mobile"/>
-      <menu class="list-nav-bar" :class="variant ? variant : ''">
+      <menu class="list-nav-bar">
         <li class="element">
           <RouterLink class="link-element" to="/">
             <LazyIcon class="icon-mobile" name="iconamoon:home-light" />

@@ -76,6 +76,10 @@ header {
     border: 1px solid black;
   }
 
+  .dark .icon-menu-mobile {
+    color: white;
+  }
+
   .list-nav-bar {
     position: absolute;
     display: none;
