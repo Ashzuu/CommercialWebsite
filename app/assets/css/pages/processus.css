@@ -225,4 +225,14 @@ h1, h2, h3 {
     flex-direction: column;
     gap: 20px;
   }
+
+  @media (max-width: 500px){
+    .title-section-title h2, .title-section-title span {
+      font-size: 1.6rem;
+    }
+
+    .img-section-content p {
+      font-size: 14px;
+    }
+  }
 }

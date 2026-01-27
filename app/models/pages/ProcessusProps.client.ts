@@ -42,9 +42,11 @@ export class ProcessusPropsClient {
 
   private calculateFor(nbStep:number):boolean {
     let res:boolean = false;
+    const element:Element = document.getElementsByClassName("first-img-section")[0]!
     if(document.documentElement.clientWidth <= this.BREAKPOINT_VALUE) {
       const height:number = document.documentElement.clientHeight;
-      const minSize:boolean = window.scrollY > (height/2)*nbStep;
+      console.log(element.clientHeight)
+      const minSize:boolean = window.scrollY > (height/2)+element.clientHeight*(nbStep-1);
       console.log(window.scrollY, minSize);
       if(minSize) {
         res = true;
