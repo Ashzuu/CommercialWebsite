@@ -3,17 +3,31 @@ export class ProcessusPropsClient {
   private step1:Ref<boolean> = ref(false);
   private step2:Ref<boolean> = ref(false);
   private step3:Ref<boolean> = ref(false);
+  private handleScroll: OmitThisParameter<() => void>;
+
+  private logicScroll() {
+    this.step1.value = this.calculateFor(1);
+    this.step2.value = this.calculateFor(2);
+    this.step3.value = this.calculateFor(3);
+    this.updateDOM();
+  }
+
+  constructor() {
+    this.handleScroll = this.logicScroll.bind(this);
+  }
 
   /**
-   * Define the event in the constructor to show event
+   * Initialize the listener between the scroll and the logic of scrolling.
    */
-  constructor() {
-    document.addEventListener("scroll", () => {
-      this.step1.value = this.calculateFor(1);
-      this.step2.value = this.calculateFor(2);
-      this.step3.value = this.calculateFor(3);
-      this.updateDOM();
-    })
+  public init():void  {
+    document.addEventListener("scroll", this.handleScroll);
+  }
+
+  /**
+   * Destroy the link between the logic & the event
+   */
+  public destroy():void {
+    document.removeEventListener("scroll", this.handleScroll);
   }
 
   /**

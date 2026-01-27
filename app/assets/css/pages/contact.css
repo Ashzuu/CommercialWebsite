@@ -192,9 +192,8 @@ input:focus, select:focus, textarea:focus {
     margin-bottom: 5%;
   }
 
-;
-
   .contact-container {
+    display: flex;
     flex-direction: column;
     gap: 10%;
   }
@@ -220,8 +219,4 @@ input:focus, select:focus, textarea:focus {
   .contact-form-container {
     padding: 20px;
   }
-}
-
-@media (max-width: 768px) {
-
 }

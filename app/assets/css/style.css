@@ -1,9 +1,16 @@
 :root {
-  --primary-color:#303030;
+  --primary-color: #262626;
   --secondary-color: #8C8C8C;
   --background-color:white;
-  --border-color:#ACACAC;
+  --border-color: #3d3d3d;
   --contrast-color: #8C8C8C;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,6 +20,7 @@ body {
   margin:0;
   font-family: Inter, "Inter Semi Bold", -apple-system, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 header {

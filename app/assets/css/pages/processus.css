@@ -119,6 +119,11 @@ h1, h2, h3 {
   margin: 0;
 }
 
+.information-complementaire {
+  font-size: 10px;
+  font-style: oblique;
+}
+
 .tarification-section-container {
   height: fit-content;
 }
@@ -141,18 +146,14 @@ h1, h2, h3 {
 
 .tarification-price-container {
   display: flex;
-  align-items: center;
   gap: 40px;
-  height: 50%;
+  height: 100%;
+  width: 100%;
   padding: 5% 0;
 }
 
 .tarification-price-container hr {
   height: 80%;
-}
-
-.tarification-price-container .card-tarification {
-  width: 100%;
 }
 
 #process-page-container {
@@ -178,7 +179,6 @@ h1, h2, h3 {
 /* Responsive */
 
 @media (max-width: 1200px) {
-
   .title-section-container {
     width: 80%;
     text-align: center;

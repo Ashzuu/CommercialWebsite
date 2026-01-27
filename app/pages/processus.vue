@@ -1,31 +1,44 @@
 <script setup lang="ts">
-  import { ref, type Ref, onMounted, onUnmounted } from 'vue'
+  import { onMounted, onUnmounted } from 'vue'
   import {ProcessusPropsClient} from "~/models/pages/ProcessusProps.client";
 
   const advantagesVitrine = [
       "Application web 1 à 3 pages",
       "Architecture SOLID",
       "Personalisation",
-      "Accompagnement technique",
-      "Aide à la mise en production",
-      "Possibilité de faire évoluer son site"
+      "Accompagnement technique"
   ]
 
   const advantagesApplication = [
-      "Application web avec API + BDD",
-      "Architecture SOLID",
-      "Personalisation avancée",
-      "Accompagnement technique",
-      "Aide à la mise en production",
-      "Possibilité de faire évoluer son site",
+      "Intégralité du pack 'Efficace'",
+      "Possibilité d'obtenir une base de données",
+      "API basique",
+      "Personnalisation avancé",
+      "Procédure de mise en production",
+      "Garantie bugs & imprévus 6 mois",
   ]
+
+  const advantagesAllIn = [
+      "Intégralité du pack 'Premium'",
+      "Accompagenement personnalisé",
+      "API avancée",
+      "Développement d'outils tiers*",
+      "Garantie bugs & imprévus 1 an"
+  ]
+
+  let manager:ProcessusPropsClient = null;
+
   onMounted(() => {
-    const manager:Ref = ref(new ProcessusPropsClient());
+    manager = new ProcessusPropsClient();
+    manager.init();
   })
 
   onUnmounted(() => {
-    document.removeEventListener("scroll", () => {});
+    if(manager){
+      manager.destroy();
+    }
   })
+
 </script>
 
 <template>
@@ -78,18 +91,24 @@
             <hr>
             <p>Attention : les coûts peuvent varier en fonction du besoin, du projet, ainsi que des spécificités techniques et les contraintes de celui-ci.</p>
             <p>Ces prix sont à titre indicatifs, et ne sont pas contractuels.</p>
+            <p class="information-complementaire">* Toutes les solutions demandées sont réalisables, mais peuvent engendrer un coût supplémentaire non négligeable.</p>
           </div>
           <div class="tarification-price-container">
             <ForfaitCard
-              name="Vitrine"
-              :price="400"
+              name="Efficace"
+              :price="600"
               :features="advantagesVitrine"
             />
-            <hr>
             <ForfaitCard
-              name="Application"
-              :price="1200"
+              name="Premium"
+              :price="1100"
+              :is-premium="true"
               :features="advantagesApplication"
+            />
+            <ForfaitCard
+                name="Tout-en-un"
+                :price="2400"
+                :features="advantagesAllIn"
             />
           </div>
         </section>

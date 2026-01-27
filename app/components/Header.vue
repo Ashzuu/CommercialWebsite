@@ -8,10 +8,22 @@
   })
 </script>
 
+<script lang="ts">
+  const isMenuActive:Ref = ref(false);
+  function toggleMenuActive() {
+    isMenuActive.value = !isMenuActive.value;
+  }
+
+  function forceCloseMenu(){
+    isMenuActive.value = false;
+  }
+</script>
+
 <template>
   <header>
     <div id="header-logo-container">
-      <LazyNuxtImg src="/img/logo.png" alt="Logo du site"/>
+      <LazyNuxtImg v-if="variant" src="/img/logo_dark.png" alt="Logo du site"/>
+      <LazyNuxtImg v-else src="/img/logo_light.png" alt="Logo du site"/>
     </div>
     <div id="header-menu-container" >
       <nav class="nav-bar">
@@ -23,24 +35,21 @@
       </nav>
     </div>
     <div id="header-menu-container-mobile" :class="variant ? variant : ''">
-      <LazyIcon name="iconamoon:apps-bold" class="icon-menu-mobile"/>
-      <menu class="list-nav-bar">
+      <LazyIcon name="iconamoon:apps-bold" class="icon-menu-mobile" @click="toggleMenuActive"/>
+      <menu class="list-nav-bar" :class="isMenuActive ? 'opened' : ''">
         <li class="element">
-          <RouterLink class="link-element" to="/">
+          <RouterLink active-class="active-icon" class="link-element" to="/" @click="forceCloseMenu">
             <LazyIcon class="icon-mobile" name="iconamoon:home-light" />
-            Accueil
           </RouterLink>
         </li>
         <li class="element">
-          <RouterLink class="link-element" to="/processus">
-            <LazyIcon class="icon-mobile" name="iconamoon:settings-light" />
-            Processus création d'un site
+          <RouterLink active-class="active-icon" class="link-element" to="/processus" @click="forceCloseMenu">
+            <LazyIcon class="icon-mobile" name="iconamoon:synchronize-light" />
           </RouterLink>
         </li>
         <li class="element">
-          <RouterLink class="link-element" to="/contact">
+          <RouterLink active-class="active-icon" class="link-element" to="/contact" @click="forceCloseMenu">
             <LazyIcon class="icon-mobile" name="iconamoon:phone-light" />
-            Contact
           </RouterLink>
         </li>
       </menu>
