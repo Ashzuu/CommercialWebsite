@@ -1,4 +1,7 @@
 <script setup lang="ts">
+  import { ref, type Ref, onMounted, onUnmounted } from 'vue'
+  import {ProcessusPropsClient} from "~/models/pages/ProcessusProps.client";
+
   const advantagesVitrine = [
       "Application web 1 à 3 pages",
       "Architecture SOLID",
@@ -16,6 +19,13 @@
       "Aide à la mise en production",
       "Possibilité de faire évoluer son site",
   ]
+  onMounted(() => {
+    const manager:Ref = ref(new ProcessusPropsClient());
+  })
+
+  onUnmounted(() => {
+    document.removeEventListener("scroll", () => {});
+  })
 </script>
 
 <template>
@@ -33,7 +43,6 @@
         <main id="presentation-section" class="sections-common image-presentation-section">
           <div class="img-section first-img-section">
             <LazyNuxtImg src="/img/illustrations/illustration_1.webp"/>
-            <LazyIcon name="clarity:cursor-hand-click-line" class="icon-click-mobile"/>
             <div class="img-section-content first-section-content">
               <div class="title-section-title">
                 <LazyIcon class="title-section-icon" name="mynaui:one-circle"/>
@@ -44,7 +53,6 @@
           </div>
           <div class="img-section second-img-section">
             <LazyNuxtImg src="/img/illustrations/illustration_2.webp"/>
-            <LazyIcon name="clarity:cursor-hand-click-line" class="icon-click-mobile"/>
             <div class="img-section-content second-section-content">
               <div class="title-section-title">
                 <Icon class="title-section-icon" name="mynaui:two-circle"/>
@@ -55,7 +63,6 @@
           </div>
           <div class="img-section third-img-section">
             <LazyNuxtImg src="/img/illustrations/illustration_3.webp"/>
-            <LazyIcon name="clarity:cursor-hand-click-line" class="icon-click-mobile"/>
             <div class="img-section-content third-section-content">
               <div class="title-section-title">
                 <LazyIcon class="title-section-icon" name="mynaui:three-circle"/>
