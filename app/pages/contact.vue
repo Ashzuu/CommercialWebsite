@@ -2,6 +2,11 @@
 import {ref} from 'vue';
 import {ManageEmail} from "~/assets/ts/ManageEmail";
 
+useSeoMeta({
+  title: 'Contactez votre Développeur Web à Dijon | Devis Gratuit',
+  description: 'Un projet web ? Contactez-moi pour un devis gratuit. Disponible sur Dijon, Lyon, Grenoble et toute la France. Réponse rapide garantie.',
+})
+
 const DEFAULT_ERROR_MESSAGE:string = "Veuillez réessayer plus tard ou contacter directement Evan DYNAK à l'adresse email : evan.dynak@bbox.fr"
 const DEFAULT_SUCCESS_MESSAGE:string = "Message envoyé avec succès à l'adresse email d'Evan DYNAK. Merci pour votre message, vous recevrez une réponse sous 48h."
 

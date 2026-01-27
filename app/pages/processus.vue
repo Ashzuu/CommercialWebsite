@@ -2,6 +2,11 @@
   import { onMounted, onUnmounted } from 'vue'
   import {ProcessusPropsClient} from "~/models/pages/ProcessusProps.client";
 
+  useSeoMeta({
+    title: 'Processus de Création de Site Web | Développement Sur Mesure',
+    description: "Découvrez comment je réalise votre site internet : de l'analyse de vos besoins à la mise en ligne. Une approche professionnelle et transparente pour un résultat de qualité.",
+  })
+
   const advantagesVitrine = [
       "Application web 1 à 3 pages",
       "Architecture SOLID",

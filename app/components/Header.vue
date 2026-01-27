@@ -20,7 +20,7 @@
 </script>
 
 <template>
-  <header>
+  <header :class="variant == 'dark' ? 'dark-bg' : ''">
     <div id="header-logo-container">
       <LazyNuxtImg v-if="variant" src="/img/logo_dark.png" alt="Logo du site"/>
       <LazyNuxtImg v-else src="/img/logo_light.png" alt="Logo du site"/>

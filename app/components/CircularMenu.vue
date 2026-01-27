@@ -7,9 +7,9 @@
 
 <template>
   <div class="circular-menu">
-    <span v-if="manager.PreviousLabel!=null" @click="manager.ChangeCurrentSelection(manager.Id-1)" class="previous_element discret_element clickable_element">{{manager.PreviousLabel}}</span>
-    <span class="current_element clickable_element">{{manager.Label}}</span>
-    <span v-if="manager.NextLabel!=null" @click="manager.ChangeCurrentSelection(manager.Id+1)" class="next_element discret_element clickable_element">{{manager.NextLabel}}</span>
+    <span v-if="manager.PreviousLabel!=null" class="previous_element discret_element clickable_element" @click="manager.ChangeCurrentSelection(manager.Id-1)">{{manager.PreviousLabel}}</span>
+    <span class="current_element">{{manager.Label}}</span>
+    <span v-if="manager.NextLabel!=null" class="next_element discret_element clickable_element" @click="manager.ChangeCurrentSelection(manager.Id+1)">{{manager.NextLabel}}</span>
   </div>
 </template>
 
