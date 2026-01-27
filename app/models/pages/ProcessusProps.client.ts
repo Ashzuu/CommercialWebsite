@@ -45,9 +45,7 @@ export class ProcessusPropsClient {
     const element:Element = document.getElementsByClassName("first-img-section")[0]!
     if(document.documentElement.clientWidth <= this.BREAKPOINT_VALUE) {
       const height:number = document.documentElement.clientHeight;
-      console.log(element.clientHeight)
       const minSize:boolean = window.scrollY > (height/2)+element.clientHeight*(nbStep-1);
-      console.log(window.scrollY, minSize);
       if(minSize) {
         res = true;
       }
@@ -63,7 +61,7 @@ export class ProcessusPropsClient {
 
   private manageClasses(className:string, step:boolean){
     const element:Element = document.getElementsByClassName(className)[0]!
-    console.log(element)
+
     if(step){
       if(!element.classList.contains("active-darkness")){
         element.classList.add("active-darkness");
