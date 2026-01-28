@@ -25,6 +25,16 @@ main {
   flex-direction: column;
 }
 
+.legals-link {
+  color: white;
+  text-decoration: none;
+}
+
+.little-button {
+  width: 30%;
+  font-size: 16px !important;
+}
+
 .close {
   position: absolute;
   top: 10px;
@@ -53,6 +63,7 @@ main {
 
 .contact-container {
   display: flex;
+  gap: 5%;
   width: 80%;
   height: 80%;
 }
@@ -75,7 +86,7 @@ main {
   color: #cccccc;
   line-height: 1.6;
   margin-bottom: 40px;
-  max-width: 400px;
+  max-width: 80%;
 }
 
 .detail-item {
@@ -178,10 +189,32 @@ input:focus, select:focus, textarea:focus {
   background-color: #555;
 }
 
-@media (max-width: 768px) {
-  .container {
+#contact-page-container {
+  background: var(--primary-color);
+}
+
+@media (max-width: 1200px) {
+  .little-button {
+    width: auto;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-info-container {
+    margin-bottom: 5%;
+  }
+
+  .contact-container {
+    display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10%;
+  }
+
+  main {
+    height: auto;
+    padding-bottom: 5%;
   }
 
   .main-title {
@@ -200,8 +233,4 @@ input:focus, select:focus, textarea:focus {
   .contact-form-container {
     padding: 20px;
   }
-}
-
-#contact-page-container {
-  background: var(--primary-color);
 }

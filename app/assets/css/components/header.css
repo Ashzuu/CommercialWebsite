@@ -2,6 +2,11 @@ header {
   display: flex;
   justify-content: space-between;
   height: 10dvh;
+  background: #ffffff;
+}
+
+.dark-bg {
+  background: var(--primary-color);
 }
 
 #header-logo-container {
@@ -17,13 +22,13 @@ header {
   height: 100%;
 }
 
-#header-menu-container nav {
+#header-menu-container .nav-bar {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-#header-menu-container nav ul {
+#header-menu-container .nav-bar .list-nav-bar {
   margin: 0;
   padding: 0;
   display: flex;
@@ -32,7 +37,7 @@ header {
   width: 100%;
 }
 
-#header-menu-container nav ul li a {
+#header-menu-container .nav-bar .list-nav-bar .element .link-element {
   color: black;
   text-decoration: none;
   font-size: 1.5em;
@@ -45,10 +50,97 @@ header {
 }
 
 /* Variant */
-.dark li a {
+#header-menu-container .dark .element .link-element {
   color: white !important;
 }
 
 .dark .active {
   background: #505050;
+}
+
+#header-menu-container-mobile {
+  display: none;
+  font-size: 40px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  #header-menu-container {
+    display: none;
+  }
+
+  #header-menu-container-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .active-icon {
+    color: var(--secondary-color) !important;
+  }
+
+  .icon-menu-mobile {
+    cursor: pointer;
+    color: var(--primary-color);
+    border: 1px solid black;
+  }
+
+  .dark .icon-menu-mobile {
+    color: white;
+  }
+
+  .list-nav-bar {
+    position: absolute;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    top: calc(10dvh - 40px);
+    right: 10dvw;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    z-index: 3;
+    list-style: none;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+
+  .element {
+    position: relative;
+    text-align: center;
+  }
+
+  .link-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .opened {
+    display: flex;
+  }
+
+  .link-element .icon-mobile {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .list-nav-bar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1200px) and (max-height: 600px){
+  header {
+    height: 20dvh;
+  }
 }

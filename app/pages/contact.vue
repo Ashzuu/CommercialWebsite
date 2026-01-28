@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import {ManageEmail} from "~/assets/ts/ManageEmail";
+import {ButtonType} from "~/models/enum/ButtonType";
+
+useSeoMeta({
+  title: 'Contactez votre Développeur Web à Dijon | Devis Gratuit',
+  description: 'Un projet web ? Contactez-moi pour un devis gratuit. Disponible sur Dijon, Lyon, Grenoble et toute la France. Réponse rapide garantie.',
+})
 
 const DEFAULT_ERROR_MESSAGE:string = "Veuillez réessayer plus tard ou contacter directement Evan DYNAK à l'adresse email : evan.dynak@bbox.fr"
 const DEFAULT_SUCCESS_MESSAGE:string = "Message envoyé avec succès à l'adresse email d'Evan DYNAK. Merci pour votre message, vous recevrez une réponse sous 48h."
@@ -66,7 +72,7 @@ const onClickButtonClose = () => {
     <Header variant="dark"/>
     <div v-if="show" class="container-message-temoin" :class="success ? 'success-message' : 'failed-message'">
       <div class="content-message-temoin">
-        <Icon name="pajamas:close-xs" class="close" :onclick="onClickButtonClose"></Icon>
+        <LazyIcon name="pajamas:close-xs" class="close" :onclick="onClickButtonClose"/>
         <h3 v-if="success" >Votre message a bien été envoyé !</h3>
         <h3 v-else>Une erreur est survenue lors de l'envoi du message.</h3>
 
@@ -78,7 +84,7 @@ const onClickButtonClose = () => {
     <main>
       <div class="contact-container">
         <div class="contact-info-container">
-          <h1 class="main-title">Parlons de<br>votre projet</h1>
+          <h1 class="main-title">Parlons de<br> votre projet</h1>
           <p class="subtitle">
             Vous avez une idée en tête ? Je suis là pour vous accompagner dans la création de votre site web, étape par étape.
           </p>
@@ -91,26 +97,27 @@ const onClickButtonClose = () => {
               <span class="label">Téléphone</span>
               <span class="value">07 84 67 54 95</span>
             </div>
+            <Button class="little-button" label="Mentions légales" name-route="/legals" :button-type="ButtonType.OUTLINED"/>
           </div>
         </div>
 
         <div class="contact-form-container">
-          <form @submit.prevent="submitForm" class="form-grid">
+          <form class="form-grid" @submit.prevent="submitForm">
 
             <div class="form-row">
               <div class="form-group half">
                 <label for="nom">Nom</label>
-                <input type="text" id="nom" v-model="form.nom" placeholder="Dupont" />
+                <input id="nom" v-model="form.nom" type="text" placeholder="Dupont" >
               </div>
               <div class="form-group half">
                 <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" v-model="form.prenom" placeholder="Jean" />
+                <input id="prenom" v-model="form.prenom" type="text" placeholder="Jean" >
               </div>
             </div>
 
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" v-model="form.email" placeholder="jean.dupont@gmail.com" />
+              <input id="email" v-model="form.email" type="email" placeholder="jean.dupont@gmail.com" >
             </div>
 
             <div class="form-group">
@@ -127,13 +134,13 @@ const onClickButtonClose = () => {
 
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" v-model="form.message" rows="5" placeholder="Décrivez votre projet..."></textarea>
+              <textarea id="message" v-model="form.message" rows="5" placeholder="Décrivez votre projet..."/>
             </div>
 
             <div class="form-actions">
               <button type="submit" class="btn-submit">
                 Envoyer
-                <Icon name="iconamoon:arrow-right-2-bold"></Icon>
+                <LazyIcon name="iconamoon:arrow-right-2-bold"/>
               </button>
             </div>
           </form>

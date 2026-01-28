@@ -1,14 +1,14 @@
 import emailjs from '@emailjs/browser';
-
 export class ManageEmail {
   private serviceId:string;
   private templateId:string;
 
   constructor() {
-    this.serviceId = "service_md6z2fo";
-    this.templateId = "template_24hbv7e";
+    const config = useRuntimeConfig();
+    this.serviceId = config.public.emailjsServiceId ?? '';
+    this.templateId = config.public.emailjsTemplateId ?? '';
     emailjs.init({
-      publicKey: 'H5FE663Sp-7VW_CoC',
+      publicKey: config.public.emailjsPublicKey ?? '',
       blockHeadless: true,
       blockList: {
         list: ['foo@emailjs.com', 'bar@emailjs.com'],

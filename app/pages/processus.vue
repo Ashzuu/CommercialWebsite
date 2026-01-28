@@ -1,21 +1,49 @@
 <script setup lang="ts">
+  import { onMounted, onUnmounted } from 'vue'
+  import {ProcessusPropsClient} from "~/models/pages/ProcessusProps.client";
+
+  useSeoMeta({
+    title: 'Processus de Création de Site Web | Développement Sur Mesure',
+    description: "Découvrez comment je réalise votre site internet : de l'analyse de vos besoins à la mise en ligne. Une approche professionnelle et transparente pour un résultat de qualité.",
+  })
+
   const advantagesVitrine = [
       "Application web 1 à 3 pages",
       "Architecture SOLID",
       "Personalisation",
-      "Accompagnement technique",
-      "Aide à la mise en production",
-      "Possibilité de faire évoluer son site"
+      "Accompagnement technique"
   ]
 
   const advantagesApplication = [
-      "Application web avec API + BDD",
-      "Architecture SOLID",
-      "Personalisation avancée",
-      "Accompagnement technique",
-      "Aide à la mise en production",
-      "Possibilité de faire évoluer son site",
+      "Intégralité du pack 'Efficace'",
+      "Possibilité d'obtenir une base de données",
+      "API basique",
+      "Personnalisation avancé",
+      "Procédure de mise en production",
+      "Garantie bugs & imprévus 6 mois",
   ]
+
+  const advantagesAllIn = [
+      "Intégralité du pack 'Premium'",
+      "Accompagenement personnalisé",
+      "API avancée",
+      "Développement d'outils tiers*",
+      "Garantie bugs & imprévus 1 an"
+  ]
+
+  let manager:ProcessusPropsClient = null;
+
+  onMounted(() => {
+    manager = new ProcessusPropsClient();
+    manager.init();
+  })
+
+  onUnmounted(() => {
+    if(manager){
+      manager.destroy();
+    }
+  })
+
 </script>
 
 <template>
@@ -28,21 +56,21 @@
             <h1>Processus de création d'un site web</h1>
             <p class="title-section-subtitle">Découvrez mes processus de création des site Internet, étape par étape.</p>
           </div>
-          <Icon class="icon-title-section" name="iconamoon:arrow-down-2-bold"/>
+          <LazyIcon class="icon-title-section" name="iconamoon:arrow-down-2-bold"/>
         </section>
         <main id="presentation-section" class="sections-common image-presentation-section">
           <div class="img-section first-img-section">
-            <NuxtImg src="/img/illustrations/illustration_1.webp"/>
+            <img loading="lazy" src="/img/illustrations/illustration_1.webp"/>
             <div class="img-section-content first-section-content">
               <div class="title-section-title">
-                <Icon class="title-section-icon" name="mynaui:one-circle"/>
+                <LazyIcon class="title-section-icon" name="mynaui:one-circle"/>
                 <h2>Préparation</h2>
               </div>
               <p>Analyse des besoins, définition des objectifs, choix des technologies et planification du projet.</p>
             </div>
           </div>
           <div class="img-section second-img-section">
-            <NuxtImg src="/img/illustrations/illustration_2.webp"/>
+            <img loading="lazy" src="/img/illustrations/illustration_2.webp"/>
             <div class="img-section-content second-section-content">
               <div class="title-section-title">
                 <Icon class="title-section-icon" name="mynaui:two-circle"/>
@@ -52,10 +80,10 @@
             </div>
           </div>
           <div class="img-section third-img-section">
-            <NuxtImg src="/img/illustrations/illustration_3.webp"/>
+            <img loading="lazy" src="/img/illustrations/illustration_3.webp"/>
             <div class="img-section-content third-section-content">
               <div class="title-section-title">
-                <Icon class="title-section-icon" name="mynaui:three-circle"/>
+                <LazyIcon class="title-section-icon" name="mynaui:three-circle"/>
                 <h2>Retours & Retouches</h2>
               </div>
               <p>Recueil des retours et retouches : priorisation des ajustements fonctionnels et graphiques, correction des bugs, optimisation des performances et accessibilité. Validation finale via une recette, préparation du déploiement et accompagnement pour la mise en production.</p>
@@ -68,18 +96,24 @@
             <hr>
             <p>Attention : les coûts peuvent varier en fonction du besoin, du projet, ainsi que des spécificités techniques et les contraintes de celui-ci.</p>
             <p>Ces prix sont à titre indicatifs, et ne sont pas contractuels.</p>
+            <p class="information-complementaire">* Toutes les solutions demandées sont réalisables, mais peuvent engendrer un coût supplémentaire non négligeable.</p>
           </div>
           <div class="tarification-price-container">
             <ForfaitCard
-              name="Vitrine"
-              :price="400"
+              name="Efficace"
+              :price="600"
               :features="advantagesVitrine"
             />
-            <hr>
             <ForfaitCard
-              name="Application"
-              :price="1200"
+              name="Premium"
+              :price="1100"
+              :is-premium="true"
               :features="advantagesApplication"
+            />
+            <ForfaitCard
+                name="Tout-en-un"
+                :price="2400"
+                :features="advantagesAllIn"
             />
           </div>
         </section>
