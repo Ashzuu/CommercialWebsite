@@ -13,8 +13,13 @@ export default defineNuxtConfig({
         lang: 'fr'
       },
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover',
-
     }
+  },
+  sitemap: {
+    zeroRuntime: true
+  },
+  site: {
+    url: "https://website.evandynak.me/"
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },

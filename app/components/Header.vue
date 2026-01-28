@@ -22,8 +22,8 @@
 <template>
   <header :class="variant == 'dark' ? 'dark-bg' : ''">
     <div id="header-logo-container">
-      <LazyNuxtImg v-if="variant" src="/img/logo_dark.png" alt="Logo du site"/>
-      <LazyNuxtImg v-else src="/img/logo_light.png" alt="Logo du site"/>
+      <img loading="lazy" v-if="variant" src="/img/logo_dark.png" alt="Logo du site"/>
+      <img loading="lazy" v-else src="/img/logo_light.png" alt="Logo du site"/>
     </div>
     <div id="header-menu-container" >
       <nav class="nav-bar">

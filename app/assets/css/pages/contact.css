@@ -25,6 +25,16 @@ main {
   flex-direction: column;
 }
 
+.legals-link {
+  color: white;
+  text-decoration: none;
+}
+
+.little-button {
+  width: 30%;
+  font-size: 16px !important;
+}
+
 .close {
   position: absolute;
   top: 10px;
@@ -184,6 +194,10 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (max-width: 1200px) {
+  .little-button {
+    width: auto;
+  }
+
   .main-title {
     font-size: 2.5rem;
   }
