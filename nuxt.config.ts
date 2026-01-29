@@ -7,7 +7,8 @@ export default defineNuxtConfig({
         {name:"description", content:"Développeur diplômé (DUT Informatique) basé à Dijon. Création de sites web sur mesure en Bourgogne-Franche-Comté, Lyon et Grenoble. Profitez d'un rapport qualité/prix imbattable et d'une grande réactivité."},
         {name:"ogTitle", content:"Développeur Web Freelance - Dijon, Lyon, Grenoble"},
         {name:"ogDescription", content:"Besoin d'un site web performant ? Je propose des prestations à un rapport qualité / prix imbattable. Disponible immédiatement."},
-        {name:"ogUrl", content:"https://website.evandynak.me/"}
+        {name:"ogUrl", content:"https://website.evandynak.me/"},
+        {name:"ogImage", content:"https://website.evandynak.me/img/logo_light.png"}
       ],
       htmlAttrs: {
         lang: 'fr'

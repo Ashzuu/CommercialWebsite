@@ -57,7 +57,7 @@
   .outl {
     background-color: transparent;
     border: 1px solid var(--border-color);
-    color: var(--border-color);
+    color: white;
   }
 
   .ghost {

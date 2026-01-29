@@ -10,7 +10,7 @@
   const advantagesVitrine = [
       "Application web 1 à 3 pages",
       "Architecture SOLID",
-      "Personalisation",
+      "Personnalisation",
       "Accompagnement technique"
   ]
 
@@ -25,7 +25,7 @@
 
   const advantagesAllIn = [
       "Intégralité du pack 'Premium'",
-      "Accompagenement personnalisé",
+      "Accompagnement personnalisé",
       "API avancée",
       "Développement d'outils tiers*",
       "Garantie bugs & imprévus 1 an"
@@ -76,7 +76,8 @@
                 <Icon class="title-section-icon" name="mynaui:two-circle"/>
                 <h2>Session de développement</h2>
               </div>
-              <p>Développement itératif et transparent : réalisation des pages et composants à partir des maquettes, intégration de l'API et de la base de données (si nécessaire), et mise en place des tests unitaires et E2E. Livrables réguliers et démonstrations pour recueillir les premiers retours et ajuster l'application.</p>
+              <p>Développement itératif et transparent : réalisation des pages et composants à partir des maquettes, intégration de l'API et de la base de données (si nécessaire), et mise en place des tests unitaires et E2E.
+                Livrables réguliers et démonstrations pour recueillir les premiers retours et ajuster l'application.</p>
             </div>
           </div>
           <div class="img-section third-img-section">
@@ -86,7 +87,8 @@
                 <LazyIcon class="title-section-icon" name="mynaui:three-circle"/>
                 <h2>Retours & Retouches</h2>
               </div>
-              <p>Recueil des retours et retouches : priorisation des ajustements fonctionnels et graphiques, correction des bugs, optimisation des performances et accessibilité. Validation finale via une recette, préparation du déploiement et accompagnement pour la mise en production.</p>
+              <p>Recueil des retours et retouches : priorisation des ajustements fonctionnels et graphiques, correction des bugs, optimisation des performances et accessibilité.
+                Validation finale via une recette, préparation du déploiement et accompagnement pour la mise en production.</p>
             </div>
           </div>
         </main>

@@ -11,7 +11,7 @@ export default class HomePageProps {
         1,
         "A l'écoute de vos envies",
         "Des sites internet sur-mesure, adaptés à vos besoins.",
-        "Nous vous proposons une large gamme de services adaptés à vos besoins et à vos envies. " +
+        "Nous vous proposons une large gamme de services adaptée à vos besoins et à vos envies. " +
         "Que vous cherchiez un site internet pour votre entreprise, ou un site de gestion,  " +
         "toutes les idées sont possibles.",
         "/img/background/homepage1.webp"
@@ -19,7 +19,7 @@ export default class HomePageProps {
       new HomePageElement(
         2,
         "A moindre coût",
-        "Des sites internet à bas coût, sans néglier la qualité.",
+        "Des sites internet à bas coût, sans négliger la qualité.",
         "Nous mettons un point d'honneur à vous proposer des services de qualité à des prix compétitifs. " +
         "Nous croyons que tout le monde devrait avoir accès à des solutions web performantes, " +
         "sans se ruiner.",

@@ -120,7 +120,7 @@ header {
     width: fit-content;
     padding: 10px;
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-decoration: none;
   }
 
@@ -129,7 +129,7 @@ header {
   }
 
   .link-element .icon-mobile {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }
 
