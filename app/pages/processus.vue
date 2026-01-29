@@ -54,7 +54,7 @@
         <section class="title-section-container sections-common">
           <div class="title-section">
             <h1>Processus de création d'un site web</h1>
-            <p class="title-section-subtitle">Découvrez mes processus de création des site Internet, étape par étape.</p>
+            <p class="title-section-subtitle">Découvrez mes processus de création des sites Internet, étape par étape.</p>
           </div>
           <LazyIcon class="icon-title-section" name="iconamoon:arrow-down-2-bold"/>
         </section>

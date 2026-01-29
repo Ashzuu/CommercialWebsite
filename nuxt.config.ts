@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      title: "Evan DYNAK - Conception & Développeur de Site Internet",
       meta: [
         {name:"title", content:"Développeur Web & Mobile à Dijon | Création de Site Internet - Qualité & Prix"},
         {name:"description", content:"Développeur diplômé (DUT Informatique) basé à Dijon. Création de sites web sur mesure en Bourgogne-Franche-Comté, Lyon et Grenoble. Profitez d'un rapport qualité/prix imbattable et d'une grande réactivité."},
