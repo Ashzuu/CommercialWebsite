@@ -15,11 +15,10 @@
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          "name": "Votre Nom - Développeur Web",
+          "name": "Evan DYNAK - Développeur Web",
           "image": "https://www.votre-domaine.com/img/logo_dark.png",
           "description": "Services de développement web sur mesure, création de sites internet et applications.",
           "address": {
-            "@type": "PostalAddress",
             "addressLocality": "Dijon",
             "addressRegion": "Bourgogne-Franche-Comté",
             "addressCountry": "FR"
@@ -33,7 +32,16 @@
             "France"
           ],
           "priceRange": "€",
-          "knowsAbout": ["Développement Web", "Nuxt.js", "Vue.js", "Création de site internet"]
+          "knowsAbout": [
+              "Développement Web",
+            "Nuxt.js",
+            "Vue.js",
+            "Angular",
+            "Création de site internet",
+            "Création de site web",
+            "Création d'application web",
+            "Développement logiciel"
+          ]
         })
       }
     ]
@@ -58,8 +66,8 @@
           <CircularMenu/>
         </section>
         <div class="content-home-container">
-          <LazyIcon v-if="manager.PreviousLabel" @click="manager.ChangeCurrentSelection(manager.Id - 1)" class="arrow-left-icon" name="iconamoon:arrow-left-6-circle-light"/>
-          <LazyIcon v-if="manager.NextLabel" @click="manager.ChangeCurrentSelection(manager.Id + 1)" class="arrow-right-icon" name="iconamoon:arrow-right-6-circle-light"/>
+          <LazyIcon v-if="manager.PreviousLabel" class="arrow-left-icon" name="iconamoon:arrow-left-6-circle-light" @click="manager.ChangeCurrentSelection(manager.Id - 1)"/>
+          <LazyIcon v-if="manager.NextLabel" class="arrow-right-icon" name="iconamoon:arrow-right-6-circle-light" @click="manager.ChangeCurrentSelection(manager.Id + 1)"/>
           <Transition name="fade-slide" mode="out-in">
             <div :key="manager.Id" class="animated-content">
               <h1>{{ manager.Title }}</h1>
