@@ -3,9 +3,58 @@
   import {ProcessusPropsClient} from "~/models/pages/ProcessusProps.client";
 
   useSeoMeta({
-    title: 'Processus de Création de Site Web | Développement Sur Mesure',
-    description: "Découvrez comment je réalise votre site internet : de l'analyse de vos besoins à la mise en ligne. Une approche professionnelle et transparente pour un résultat de qualité.",
+    title: 'Processus & Tarifs Création Site Web | Freelance Dijon, Lyon',
+    description: "Découvrez mon processus transparent et mes tarifs imbattables pour la création de votre site internet. Développeur freelance à votre écoute, disponible à Dijon, Lyon et partout en France.",
   })
+
+  useHead({
+    script: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Création de site internet",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Evan DYNAK",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dijon",
+              "addressRegion": "Bourgogne-Franche-Comté",
+              "addressCountry": "FR"
+            }
+          },
+          "areaServed": ["Dijon", "Lyon", "Bourgogne-Franche-Comté", "Auvergne-Rhône-Alpes", "France"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Forfaits Création Web",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Forfait Efficace" },
+                "price": "600",
+                "priceCurrency": "EUR"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Forfait Premium" },
+                "price": "1100",
+                "priceCurrency": "EUR"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Forfait Tout-en-un" },
+                "price": "2400",
+                "priceCurrency": "EUR"
+              }
+            ]
+          }
+        })
+      }
+    ]
+  })
+
 
   const advantagesVitrine = [
       "Application web 1 à 3 pages",
@@ -60,7 +109,7 @@
         </section>
         <main id="presentation-section" class="sections-common image-presentation-section">
           <div class="img-section first-img-section">
-            <img loading="lazy" src="/img/illustrations/illustration_1.webp"/>
+            <img alt="Analyse des besoins et préparation du projet de création de site internet" loading="lazy" src="/img/illustrations/illustration_1.webp"/>
             <div class="img-section-content first-section-content">
               <div class="title-section-title">
                 <LazyIcon class="title-section-icon" name="mynaui:one-circle"/>
@@ -70,7 +119,7 @@
             </div>
           </div>
           <div class="img-section second-img-section">
-            <img loading="lazy" src="/img/illustrations/illustration_2.webp"/>
+            <img alt="Développement web itératif et création de site sur mesure" loading="lazy" src="/img/illustrations/illustration_2.webp"/>
             <div class="img-section-content second-section-content">
               <div class="title-section-title">
                 <Icon class="title-section-icon" name="mynaui:two-circle"/>
@@ -81,7 +130,7 @@
             </div>
           </div>
           <div class="img-section third-img-section">
-            <img loading="lazy" src="/img/illustrations/illustration_3.webp"/>
+            <img alt="Retours clients, optimisation et mise en ligne du site web" loading="lazy" src="/img/illustrations/illustration_3.webp"/>
             <div class="img-section-content third-section-content">
               <div class="title-section-title">
                 <LazyIcon class="title-section-icon" name="mynaui:three-circle"/>
