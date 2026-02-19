@@ -9,15 +9,20 @@
 
 
   useHead({
+    // Surcharge des métas pour cette page spécifique
+    title: 'Création de site Internet sur mesure | Développeur Freelance Dijon & Lyon',
+    meta: [
+      { name: 'description', content: 'Conception de sites internet à bas prix. Développeur freelance à l\'écoute pour donner vie à vos projets, en Bourgogne, Rhône-Alpes et partout en France.' }
+    ],
     script: [
       {
         type: 'application/ld+json',
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          "name": "Votre Nom - Développeur Web",
-          "image": "https://www.votre-domaine.com/img/logo_dark.png",
-          "description": "Services de développement web sur mesure, création de sites internet et applications.",
+          "name": "Evan DYNAK - Concepteur de site Internet",
+          "image": "https://website.evandynak.me/img/logo_dark.png",
+          "description": "Création de sites internet à bas prix, développement web sur mesure. Développeur freelance hautement disponible, à l'écoute de vos besoins.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dijon",
@@ -25,15 +30,21 @@
             "addressCountry": "FR"
           },
           "areaServed": [
-            "Dijon",
-            "Bourgogne-Franche-Comté",
-            "Lyon",
-            "Grenoble",
-            "Auvergne-Rhône-Alpes",
-            "France"
+            { "@type": "City", "name": "Dijon" },
+            { "@type": "City", "name": "Lyon" },
+            { "@type": "State", "name": "Bourgogne-Franche-Comté" },
+            { "@type": "State", "name": "Auvergne-Rhône-Alpes" },
+            { "@type": "Country", "name": "France" }
           ],
-          "priceRange": "€",
-          "knowsAbout": ["Développement Web", "Nuxt.js", "Vue.js", "Création de site internet"]
+          "priceRange": "€€",
+          "knowsAbout": [
+            "Conception de site Internet",
+            "Création de site internet à bas prix",
+            "Développeur Freelance",
+            "Développement sur mesure",
+            "Nuxt.js",
+            "Vue.js"
+          ]
         })
       }
     ]
@@ -53,6 +64,17 @@
         />
       </Transition>
       <div class="overlay-obscured"/>
+      <section class="sr-only">
+        <h2>Création de site internet et Développement Web Sur Mesure</h2>
+        <p>
+          Vous cherchez un développeur freelance sur Dijon, Lyon ou partout en France ?
+          Spécialiste de la conception de sites internet, je vous accompagne dans votre projet avec
+          une grande disponibilité et une véritable envie de vous aider. Mon objectif est de comprendre
+          vos besoins pour vous proposer une création de site internet à un rapport qualité/prix imbattable.
+          Que vous soyez en Bourgogne-Franche-Comté, en Auvergne-Rhône-Alpes, ou ailleurs grâce au
+          travail dématérialisé, je suis votre partenaire de confiance.
+        </p>
+      </section>
       <div class="content-container">
         <section class="caroussel-home-section">
           <CircularMenu/>
