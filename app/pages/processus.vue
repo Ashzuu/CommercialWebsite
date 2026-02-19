@@ -66,16 +66,16 @@
   const advantagesApplication = [
       "Intégralité du pack 'Efficace'",
       "Possibilité d'obtenir une base de données",
-      "API basique",
-      "Personnalisation avancé",
+      "Gestion de données basique",
+      "Personnalisation avancée",
       "Procédure de mise en production",
-      "Garantie bugs & imprévus 6 mois",
+      "Garantie bugs & imprévus 6 mois**",
   ]
 
   const advantagesAllIn = [
       "Intégralité du pack 'Premium'",
       "Accompagnement personnalisé",
-      "API avancée",
+      "Gestion des données",
       "Développement d'outils tiers*",
       "Garantie bugs & imprévus 1 an"
   ]
@@ -103,7 +103,7 @@
         <section class="title-section-container sections-common">
           <div class="title-section">
             <h1>Processus de création d'un site web</h1>
-            <p class="title-section-subtitle">Découvrez mes processus de création des site Internet, étape par étape.</p>
+            <p class="title-section-subtitle">Découvrez mes processus de création des sites Internet, étape par étape.</p>
           </div>
           <LazyIcon class="icon-title-section" name="iconamoon:arrow-down-2-bold"/>
         </section>
@@ -147,8 +147,9 @@
             <hr>
             <p>Attention : les coûts peuvent varier en fonction du besoin, du projet, ainsi que des spécificités techniques et les contraintes de celui-ci.</p>
             <p>Ces prix sont à titre indicatifs, et ne sont pas contractuels.</p>
-            <p class="information-complementaire">* Toutes les solutions demandées sont réalisables, mais peuvent engendrer un coût supplémentaire non négligeable.</p>
           </div>
+          <p class="information-complementaire">Toutes nos solutions respectent la réglementation sur le respect des données privées en Europe (le RGPD).
+            <br/>Pour toutes informations complémentaires, n'hésitez pas à <RouterLink to="/contact">me contacter</RouterLink></p>
           <div class="tarification-price-container">
             <ForfaitCard
               name="Efficace"
@@ -167,6 +168,8 @@
                 :features="advantagesAllIn"
             />
           </div>
+          <p class="information-complementaire">* Toutes les solutions demandées sont réalisables, mais peuvent engendrer un coût supplémentaire non négligeable.</p>
+          <p class="information-complementaire">** Garanties précisées dans le contrat</p>
         </section>
       </div>
     </main>

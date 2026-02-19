@@ -4,12 +4,12 @@ export default defineNuxtConfig({
     head: {
       title: "Evan DYNAK - Développeur Freelance & Création de Site Internet",
       meta: [
-        {name: "title", content: "Création de Site Internet & Développeur Freelance | Accessible & Sur Mesure"},
-        {name: "description", content: "Développeur web freelance disponible et à l'écoute. Création de sites internet sur mesure (Bourgogne-Franche-Comté, Auvergne-Rhône-Alpes et 100% à distance). Un accompagnement fort à un prix très compétitif !"},
-        {name: "ogTitle", content: "Développeur Web Freelance - Création de sites internet"},
-        {name: "ogDescription", content: "Besoin d'un site web performant ? Je propose des prestations de qualité, un suivi personnalisé et une grande disponibilité, partout en France."},
-        {name: "ogUrl", content: "https://website.evandynak.me/"},
-        {name: "ogImage", content: "https://website.evandynak.me/img/logo_light.png"}
+        {name:"title", content:"Développeur Web & Mobile à Dijon | Création de Site Internet - Qualité & Prix"},
+        {name:"description", content:"Développeur diplômé (DUT Informatique) basé à Dijon. Création de sites web sur mesure en Bourgogne-Franche-Comté, Lyon et Grenoble. Profitez d'un rapport qualité/prix imbattable et d'une grande réactivité."},
+        {name:"ogTitle", content:"Développeur Web Freelance - Dijon, Lyon, Grenoble"},
+        {name:"ogDescription", content:"Besoin d'un site web performant ? Je propose des prestations à un rapport qualité / prix imbattable. Disponible immédiatement."},
+        {name:"ogUrl", content:"https://website.evandynak.me/"},
+        {name:"ogImage", content:"https://website.evandynak.me/img/logo_light.png"}
       ],
       htmlAttrs: {
         lang: 'fr'

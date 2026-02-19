@@ -9,11 +9,6 @@
 
 
   useHead({
-    // Surcharge des métas pour cette page spécifique
-    title: 'Création de site Internet sur mesure | Développeur Freelance Dijon & Lyon',
-    meta: [
-      { name: 'description', content: 'Conception de sites internet à bas prix. Développeur freelance à l\'écoute pour donner vie à vos projets, en Bourgogne, Rhône-Alpes et partout en France.' }
-    ],
     script: [
       {
         type: 'application/ld+json',
@@ -30,11 +25,12 @@
             "addressCountry": "FR"
           },
           "areaServed": [
-            { "@type": "City", "name": "Dijon" },
-            { "@type": "City", "name": "Lyon" },
-            { "@type": "State", "name": "Bourgogne-Franche-Comté" },
-            { "@type": "State", "name": "Auvergne-Rhône-Alpes" },
-            { "@type": "Country", "name": "France" }
+            "Dijon",
+            "Bourgogne-Franche-Comté",
+            "Lyon",
+            "Grenoble",
+            "Auvergne-Rhône-Alpes",
+            "France"
           ],
           "priceRange": "€€",
           "knowsAbout": [
@@ -42,6 +38,9 @@
             "Création de site internet à bas prix",
             "Développeur Freelance",
             "Développement sur mesure",
+            "Création de site web",
+            "Création d'application web",
+            "Développement logiciel",
             "Nuxt.js",
             "Vue.js"
           ]
@@ -80,8 +79,8 @@
           <CircularMenu/>
         </section>
         <div class="content-home-container">
-          <LazyIcon v-if="manager.PreviousLabel" @click="manager.ChangeCurrentSelection(manager.Id - 1)" class="arrow-left-icon" name="iconamoon:arrow-left-6-circle-light"/>
-          <LazyIcon v-if="manager.NextLabel" @click="manager.ChangeCurrentSelection(manager.Id + 1)" class="arrow-right-icon" name="iconamoon:arrow-right-6-circle-light"/>
+          <LazyIcon v-if="manager.PreviousLabel" class="arrow-left-icon" name="iconamoon:arrow-left-6-circle-light" @click="manager.ChangeCurrentSelection(manager.Id - 1)"/>
+          <LazyIcon v-if="manager.NextLabel" class="arrow-right-icon" name="iconamoon:arrow-right-6-circle-light" @click="manager.ChangeCurrentSelection(manager.Id + 1)"/>
           <Transition name="fade-slide" mode="out-in">
             <div :key="manager.Id" class="animated-content">
               <h1>{{ manager.Title }}</h1>
