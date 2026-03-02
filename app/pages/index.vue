@@ -15,9 +15,9 @@
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          "name": "Votre Nom - Développeur Web",
-          "image": "https://www.votre-domaine.com/img/logo_dark.png",
-          "description": "Services de développement web sur mesure, création de sites internet et applications.",
+          "name": "Evan DYNAK - Concepteur de site Internet",
+          "image": "https://website.evandynak.me/img/logo_dark.png",
+          "description": "Création de sites internet à bas prix, développement web sur mesure. Développeur freelance hautement disponible, à l'écoute de vos besoins.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dijon",
@@ -32,8 +32,18 @@
             "Auvergne-Rhône-Alpes",
             "France"
           ],
-          "priceRange": "€",
-          "knowsAbout": ["Développement Web", "Nuxt.js", "Vue.js", "Création de site internet"]
+          "priceRange": "€€",
+          "knowsAbout": [
+            "Conception de site Internet",
+            "Création de site internet à bas prix",
+            "Développeur Freelance",
+            "Développement sur mesure",
+            "Création de site web",
+            "Création d'application web",
+            "Développement logiciel",
+            "Nuxt.js",
+            "Vue.js"
+          ]
         })
       }
     ]
@@ -53,13 +63,24 @@
         />
       </Transition>
       <div class="overlay-obscured"/>
+      <section class="sr-only">
+        <h2>Création de site internet et Développement Web Sur Mesure</h2>
+        <p>
+          Vous cherchez un développeur freelance sur Dijon, Lyon ou partout en France ?
+          Spécialiste de la conception de sites internet, je vous accompagne dans votre projet avec
+          une grande disponibilité et une véritable envie de vous aider. Mon objectif est de comprendre
+          vos besoins pour vous proposer une création de site internet à un rapport qualité/prix imbattable.
+          Que vous soyez en Bourgogne-Franche-Comté, en Auvergne-Rhône-Alpes, ou ailleurs grâce au
+          travail dématérialisé, je suis votre partenaire de confiance.
+        </p>
+      </section>
       <div class="content-container">
         <section class="caroussel-home-section">
           <CircularMenu/>
         </section>
         <div class="content-home-container">
-          <LazyIcon v-if="manager.PreviousLabel" @click="manager.ChangeCurrentSelection(manager.Id - 1)" class="arrow-left-icon" name="iconamoon:arrow-left-6-circle-light"/>
-          <LazyIcon v-if="manager.NextLabel" @click="manager.ChangeCurrentSelection(manager.Id + 1)" class="arrow-right-icon" name="iconamoon:arrow-right-6-circle-light"/>
+          <LazyIcon v-if="manager.PreviousLabel" class="arrow-left-icon" name="iconamoon:arrow-left-6-circle-light" @click="manager.ChangeCurrentSelection(manager.Id - 1)"/>
+          <LazyIcon v-if="manager.NextLabel" class="arrow-right-icon" name="iconamoon:arrow-right-6-circle-light" @click="manager.ChangeCurrentSelection(manager.Id + 1)"/>
           <Transition name="fade-slide" mode="out-in">
             <div :key="manager.Id" class="animated-content">
               <h1>{{ manager.Title }}</h1>
