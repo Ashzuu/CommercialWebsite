@@ -26,7 +26,6 @@ export class ManageEmail {
       await emailjs.send(this.serviceId, this.templateId, templateParams);
       res = true;
     } catch (error) {
-      console.error(error);
       res = false;
     }
     return res;
