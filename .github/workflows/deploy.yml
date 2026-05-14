@@ -22,5 +22,8 @@ jobs:
           script: |
             cd /parts/projects/CommercialWebsite
             git pull origin main
+            echo "NUXT_PUBLIC_EMAILJS_SERVICE_ID=${{secrets.EMAILJS_SERVICE_ID}}" >> .env
+            echo "NUXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{secrets.EMAILJS_TEMPLATE_ID}}" >> .env
+            echo "NUXT_PUBLIC_EMAILJS_PUBLIC_KEY=${{secrets.EMAILJS_PUBLIC_KEY}}" >> .env
             docker compose up -d --build
             docker image prune -f
