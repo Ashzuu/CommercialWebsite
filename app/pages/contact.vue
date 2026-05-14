@@ -25,10 +25,9 @@ const form = ref({
   message: ''
 });
 
-const manager:ManageEmail = new ManageEmail();
-
 const submitForm = async () => {
   if(checkData()) {
+    const manager = new ManageEmail();
     success.value = await manager.sendEmail(form.value);
     if(success.value) {
       messageToShow.value = DEFAULT_SUCCESS_MESSAGE;
