@@ -3,6 +3,9 @@ ARG NODE_VERSION="22-alpine"
 
 FROM node:${NODE_VERSION} AS deps
 WORKDIR /app
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+
 COPY package.json package-lock.json ./
 RUN npm ci --only=production
 
