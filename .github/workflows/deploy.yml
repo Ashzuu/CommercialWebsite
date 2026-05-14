@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /parts/projects/MyPortfolio
+            cd /parts/projects/CommercialWebsite
             git pull origin main
             docker compose up -d --build
             docker image prune -f
