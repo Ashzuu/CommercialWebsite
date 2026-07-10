@@ -75,3 +75,22 @@
   color: white;
 }
 
+.next_element {
+  animation: blinkAnimation 0.6s alternate infinite;
+}
+
+@keyframes blinkAnimation {
+  0% {
+    opacity: 0.7;
+    transform: scale(1.0);
+    text-shadow: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+}
+
