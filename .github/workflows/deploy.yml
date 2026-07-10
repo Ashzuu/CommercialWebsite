@@ -22,6 +22,7 @@ jobs:
           script: |
             cd /parts/projects/CommercialWebsite
             git pull origin main
+            npm install
             cat > .env << 'EOF'
             NUXT_PUBLIC_EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}
             NUXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}
