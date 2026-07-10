@@ -115,7 +115,8 @@
                 <LazyIcon class="title-section-icon" name="mynaui:one-circle"/>
                 <h2>Préparation</h2>
               </div>
-              <p>Analyse des besoins, définition des objectifs, choix des technologies et planification du projet.</p>
+              <p>Analyse des besoins, définition des objectifs, choix des technologies et planification du projet. Ensemble, nous construisons le projet,
+              nous définissons un temps qui nous convient, un tarif et les modalités.</p>
             </div>
           </div>
           <div class="img-section second-img-section">
@@ -126,7 +127,7 @@
                 <h2>Session de développement</h2>
               </div>
               <p>Développement itératif et transparent : réalisation des pages et composants à partir des maquettes, intégration de l'API et de la base de données (si nécessaire), et mise en place des tests unitaires et E2E.
-                Livrables réguliers et démonstrations pour recueillir les premiers retours et ajuster l'application.</p>
+                Démonstrations régulières pour recueillir les premiers retours et ajuster l'application.</p>
             </div>
           </div>
           <div class="img-section third-img-section">
