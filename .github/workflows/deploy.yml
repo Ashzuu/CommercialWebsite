@@ -1,4 +1,4 @@
-name: Deploiement Docker sur CentOS
+name: Deploiement sur serveur
 
 on:
   push:
