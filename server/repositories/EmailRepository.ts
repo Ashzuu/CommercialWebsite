@@ -14,8 +14,8 @@ export class EmailRepository {
         },
       });
       return true;
-    } catch (error: any) {
-      console.error('[EmailRepository] Error calling EmailJS API:', error);
+    } catch (unused: any) {
+      console.error('[EmailRepository] Error calling EmailJS API:');
       return false;
     }
   }
