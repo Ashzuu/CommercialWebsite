@@ -28,10 +28,9 @@ export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/sitemap'],
   css: ['~/assets/css/style.css'],
   runtimeConfig: {
-    public: {
-      emailjsServiceId: '',
-      emailjsTemplateId: '',
-      emailjsPublicKey: ''
-    }
+    emailjsServiceId: '',
+    emailjsTemplateId: '',
+    emailjsPublicKey: '',
+    public: {}
   }
 })

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { ref, type Ref } from 'vue';
+
   defineProps({
     variant: {
       type: String,
@@ -6,10 +8,8 @@
       default: null
     }
   })
-</script>
 
-<script lang="ts">
-  const isMenuActive:Ref = ref(false);
+  const isMenuActive: Ref<boolean> = ref(false);
   function toggleMenuActive() {
     isMenuActive.value = !isMenuActive.value;
   }

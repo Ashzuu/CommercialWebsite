@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import {ref} from 'vue';
-import {ManageEmail} from "~/assets/ts/ManageEmail";
-import {ButtonType} from "~/models/enum/ButtonType";
+import { ref, type Ref } from 'vue';
+import { ButtonType } from "~/models/enum/ButtonType";
 
 useSeoMeta({
   title: 'Contactez votre Développeur Web à Dijon | Devis Gratuit',
@@ -27,13 +26,16 @@ const form = ref({
 
 const submitForm = async () => {
   if(checkData()) {
-    const manager = new ManageEmail();
-    success.value = await manager.sendEmail(form.value);
-    if(success.value) {
+    try {
+      await $fetch('/api/contact', {
+        method: 'POST',
+        body: form.value
+      });
+      success.value = true;
       messageToShow.value = DEFAULT_SUCCESS_MESSAGE;
       resetData();
-    }
-    else {
+    } catch (error) {
+      success.value = false;
       messageToShow.value = DEFAULT_ERROR_MESSAGE;
     }
   }
@@ -42,7 +44,6 @@ const submitForm = async () => {
     messageToShow.value = MISSING_DATA_MESSAGE;
   }
   show.value = true;
-
 };
 
 function checkData():boolean {
