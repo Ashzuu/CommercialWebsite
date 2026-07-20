@@ -3,8 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "3001:3000"
+    container_name: commercial-website
     env_file:
       - .env
     restart: unless-stopped

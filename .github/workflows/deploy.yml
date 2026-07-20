@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /parts/projects/CommercialWebsite
+            cd /repos/persos/CommercialWebsite
             git pull origin main
             npm install
             cat > .env << 'EOF'
