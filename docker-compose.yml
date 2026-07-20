@@ -6,6 +6,8 @@ services:
     container_name: commercial-website
     env_file:
       - .env
+    environment:
+      - PORT=12301
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
