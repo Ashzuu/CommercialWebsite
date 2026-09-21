@@ -3,15 +3,21 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "3001:3000"
+    container_name: commercial-website
     env_file:
       - .env
+    environment:
+      - PORT=12301
+    networks:
+      - proxy
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:12301"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 10s
 
+networks:
+  proxy:
+    external: true

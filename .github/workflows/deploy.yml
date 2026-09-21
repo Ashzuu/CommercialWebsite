@@ -1,4 +1,4 @@
-name: Deploiement Docker sur CentOS
+name: Deploiement sur serveur
 
 on:
   push:
@@ -20,8 +20,9 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /parts/projects/CommercialWebsite
+            cd /repos/persos/CommercialWebsite
             git pull origin main
+            npm install
             cat > .env << 'EOF'
             NUXT_PUBLIC_EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}
             NUXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}
