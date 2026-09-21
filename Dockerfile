@@ -7,13 +7,13 @@ ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 
 COPY package.json package-lock.json ./
-RUN npm ci --only=production
+RUN npm install --omit=dev
 
 FROM node:${NODE_VERSION} AS builder
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm install
 COPY . .
 RUN npm run build
 FROM node:${NODE_VERSION} AS runtime
