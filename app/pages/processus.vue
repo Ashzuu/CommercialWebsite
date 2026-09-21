@@ -3,8 +3,8 @@
   import {ProcessusPropsClient} from "~/models/pages/ProcessusProps.client";
 
   useSeoMeta({
-    title: 'Processus & Tarifs Création Site Web | Freelance Dijon, Lyon',
-    description: "Découvrez mon processus transparent et mes tarifs imbattables pour la création de votre site internet. Développeur freelance à votre écoute, disponible à Dijon, Lyon et partout en France.",
+    title: 'Création Site Vitrine sur Mesure & Tarifs | Créateur Indépendant',
+    description: "Découvrez mes tarifs et mon processus pour faire votre site internet. Créateur de site internet indépendant spécialisé en création de site vitrine sur mesure, pour améliorer votre identité numérique.",
   })
 
   useHead({

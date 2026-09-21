@@ -33,7 +33,6 @@ export class ManageEmail {
       await emailjs.send(this.serviceId, this.templateId, templateParams);
       res = true;
     } catch (error) {
-      console.log("[ManageEmail] Une erreur est survenue lors de l'envoi de l'email via EmailJS");
       res = false;
     }
     return res;

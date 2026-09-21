@@ -2,12 +2,12 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Evan DYNAK - Développeur Freelance & Création de Site Internet",
+      title: "Evan DYNAK - Créateur de Site Internet Indépendant à Dijon & Lyon",
       meta: [
-        {name:"title", content:"Développeur Web & Mobile à Dijon | Création de Site Internet - Qualité & Prix"},
-        {name:"description", content:"Développeur diplômé (DUT Informatique) basé à Dijon. Création de sites web sur mesure en Bourgogne-Franche-Comté, Lyon et Grenoble. Profitez d'un rapport qualité/prix imbattable et d'une grande réactivité."},
-        {name:"ogTitle", content:"Développeur Web Freelance - Dijon, Lyon, Grenoble"},
-        {name:"ogDescription", content:"Besoin d'un site web performant ? Je propose des prestations à un rapport qualité / prix imbattable. Disponible immédiatement."},
+        {name:"title", content:"Créateur de site internet indépendant | Création de site web à Dijon, Lyon et France"},
+        {name:"description", content:"Faire mon site internet avec un créateur indépendant. Améliorez votre identité numérique avec un site sur mesure. Création de site internet Dijon, Lyon et partout en France. Devis gratuit."},
+        {name:"ogTitle", content:"Créateur de Site Internet Indépendant - Dijon, Lyon, France"},
+        {name:"ogDescription", content:"Faire mon site internet sur mesure pour améliorer mon identité numérique. Créateur de site internet indépendant disponible à Dijon, Lyon et dans toute la France."},
         {name:"ogUrl", content:"https://website.evandynak.me/"},
         {name:"ogImage", content:"https://website.evandynak.me/img/logo_light.png"}
       ],
