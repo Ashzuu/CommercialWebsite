@@ -15,9 +15,9 @@
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          "name": "Evan DYNAK - Concepteur de site Internet",
+          "name": "Evan DYNAK - Créateur de site internet indépendant",
           "image": "https://website.evandynak.me/img/logo_dark.png",
-          "description": "Création de sites internet à bas prix, développement web sur mesure. Développeur freelance hautement disponible, à l'écoute de vos besoins.",
+          "description": "Créateur de site internet indépendant, je vous aide à améliorer votre identité numérique. Création de site internet sur Dijon, Lyon et dans toute la France.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dijon",
@@ -34,13 +34,14 @@
           ],
           "priceRange": "€€",
           "knowsAbout": [
-            "Conception de site Internet",
-            "Création de site internet à bas prix",
+            "Créateur de site internet indépendant",
+            "Création site internet Dijon",
+            "Création site internet Lyon",
+            "Faire mon site internet",
+            "Améliorer mon identité numérique",
+            "Création de site vitrine sur mesure",
             "Développeur Freelance",
             "Développement sur mesure",
-            "Création de site web",
-            "Création d'application web",
-            "Développement logiciel",
             "Nuxt.js",
             "Vue.js"
           ]
@@ -64,14 +65,14 @@
       </Transition>
       <div class="overlay-obscured"/>
       <section class="sr-only">
-        <h2>Création de site internet et Développement Web Sur Mesure</h2>
+        <h2>Créateur de site internet indépendant et Développement Web Sur Mesure</h2>
         <p>
-          Vous cherchez un développeur freelance sur Dijon, Lyon ou partout en France ?
-          Spécialiste de la conception de sites internet, je vous accompagne dans votre projet avec
+          Vous souhaitez faire votre site internet pour améliorer votre identité numérique ? 
+          En tant que créateur de site internet indépendant, je vous accompagne dans votre projet avec
           une grande disponibilité et une véritable envie de vous aider. Mon objectif est de comprendre
-          vos besoins pour vous proposer une création de site internet à un rapport qualité/prix imbattable.
-          Que vous soyez en Bourgogne-Franche-Comté, en Auvergne-Rhône-Alpes, ou ailleurs grâce au
-          travail dématérialisé, je suis votre partenaire de confiance.
+          vos besoins pour vous proposer une création de site vitrine sur mesure ou d'application web, à un rapport qualité/prix imbattable.
+          Spécialisé dans la création site internet Dijon et la création site internet Lyon, je travaille également avec
+          des entreprises partout en France grâce au travail dématérialisé. Confiez-moi votre projet pour concevoir un site web performant, accessible et moderne.
         </p>
       </section>
       <div class="content-container">
